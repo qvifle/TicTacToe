@@ -23,8 +23,13 @@ function App() {
 
   const chooseSqr = (square) => {
     setBoard(board.map((value, index) => {
-      if (index == square && value == '') {
-        return player
+
+      if (index == square ) {
+        if (value == '') {
+          return player
+        } else player == 'X' ? setPlayer('O') : setPlayer('X')
+        
+
       }
       return value
     }))
